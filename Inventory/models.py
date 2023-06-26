@@ -13,7 +13,7 @@ class WeaponItem(models.Model):
     quantity = models.IntegerField(default=0)
     is_cleared = models.BooleanField(default=False)
     is_need_repair = models.BooleanField(default=False)
-    is_aimed = models.BooleanField(default=False)
+    is_alligned = models.BooleanField(default=False)
     optics_one = models.ForeignKey('Optics', on_delete=models.CASCADE, related_name='optics_one', blank=True, null=True)
     optics_two = models.ForeignKey('Optics', on_delete=models.CASCADE, related_name='optics_two', blank=True, null=True)
     last_clean = models.DateField(blank=True, null=True)
