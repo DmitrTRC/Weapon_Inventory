@@ -1,13 +1,14 @@
-from django.shortcuts import render
+# import models
+from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'Inventory/index.html')
+    return HttpResponse("You're at the Inventory index.")
 
 
 def weapon_items(request):
-    return render(request, 'Inventory/weapon_items.html')
+    return HttpResponse("You're at the weapon items.")
 
 
 def weapon_item(request, weapon_item_id):
-    return render(request, 'Inventory/weapon_item.html', {'weapon_item_id': weapon_item_id})
+    return HttpResponse("You're looking at weapon item %s." % weapon_item_id)
