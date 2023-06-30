@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import WeaponItem, License
 
-# Register your models here.
+admin.site.register(WeaponItem)
+admin.site.register(License)
+
