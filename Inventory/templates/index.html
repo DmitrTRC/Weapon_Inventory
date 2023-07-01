@@ -6,10 +6,13 @@
 </head>
 <body>
 
+<h1> Weapon Inventory List </h1>
 
 {% if weapon_list %}
     <ul>
         {% for item in weapon_list %}
+            <h2>{{ item.item_name }}</h2>
+            <p3> License {{ item.item_license |linebreaksbr }}</p3>
 
         {% endfor %}
     </ul>
