@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> Inventory </title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Последние обновления на сайте{% endblock %}
+{% block content %}
 
-<h1> Inventory </h1>
+    {% for post in posts %}
+        <h3>
+            Автор: {{ post.author.get_full_name }}, Дата публикации: {{ post.pub_date|date:"d M Y" }}
+        </h3>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <hr>
+    {% endfor %}
 
-
-
-
-{# Create a table to display the inventory #}
-
-
-
-
-</body>
-</html>
+{% endblock %}
