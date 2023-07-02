@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> {{ weapon_item.item_name }} </h1>
+
+<ul>
+    {% for license in weapon_item.licenses_set.all %}
+        <li>{{ license.license_number }}</li>
+        <li>{{ license.expiration_date }}</li>
+        <li>{{ license.start_date }}</li>
+        <li>{{ license.is_active }}</li>
+    {% endfor %}
+</ul>
+
+<h2> Weapon is cleared : {{ weapon_item.is_cleared }}</h2>
+<h2> Need repair : {{ weapon_item.is_need_repair }}</h2>
+<h2> Aligned : {{ weapon_item.is_zeroed }}</h2>
+</body>
+</html>
