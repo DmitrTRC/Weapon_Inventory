@@ -1,9 +1,9 @@
 from django.urls import path
 from . import views
 
-app_name = 'inventory'
+app_name = 'Inventory'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('weapon_detail/<int:weapon_item_id>/', views.detail, name='detail')
+    path('<int:weapon_id>/', views.detail, name='detail')
 ]

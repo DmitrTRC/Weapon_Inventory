@@ -11,7 +11,7 @@
 {% if weapon_list %}
     <ul>
         {% for item in weapon_list %}
-            <li><a href="{% url 'inventory:detail' item.id %}">{{ item.item_name }}</a></li>
+            <li><a href="{% url 'Inventory:detail' item.id %}">{{ item.item_name }}</a></li>
             <p3> License {{ item.item_license |linebreaksbr }}</p3>
 
         {% endfor %}

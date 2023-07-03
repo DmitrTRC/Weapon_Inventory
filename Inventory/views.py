@@ -12,6 +12,7 @@ def index(request):
     return render(request, "index.html", context)
 
 
-def detail(request, item_id):
-    weapon_item = get_object_or_404(WeaponItem, pk=item_id)
-    return render(request, "detail.html", {"weapon_item": weapon_item})
+def detail(request, weapon_id):
+    weapon = get_object_or_404(WeaponItem, pk=weapon_id)
+    return render(request, "detail.html", {"weapon": weapon})
+
