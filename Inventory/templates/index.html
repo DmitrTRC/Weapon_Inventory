@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weapon Inventory System</title>
+</head>
+
+<body>
+
+<h1> Weapon Inventory List</h1>
+
+{% if weapon_list %}
+    <ul>
+
+        {% for item in weapon_list %}
+            <h2> Name: {{ item.item_name }}</h2>
+            <br>
+            <p3> License: {{ item.item_license }}</p3>
+            <br>
+            <br>
+        {% endfor %}
+
+    </ul>
+{% else %}
+    <p>No weapons are available</p>
+{% endif %}
+
+</body>
+</html>
